@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/NickJLombardo/LIRI/issues"
   },
-  "homepage": "https://github.com/NickJLombardo/LIRI#readme"
+  "homepage": "https://github.com/NickJLombardo/LIRI#readme",
+  "dependencies": {
+    "node-spotify-api": "^1.1.1"
+  }
 }
