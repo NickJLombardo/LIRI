@@ -24,5 +24,5 @@ It should run spotify-this-song for "I Want it That Way," as follows the text in
 
 
 
-(LIRI.png)
-Format: ![Alt Text](url)
+
+(https://octodex.github.com/images/yaktocat.png)
