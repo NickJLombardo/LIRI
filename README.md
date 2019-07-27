@@ -24,4 +24,4 @@ It should run spotify-this-song for "I Want it That Way," as follows the text in
 
 
 
-[Picture of Node Commands](LIRI/LIRI.png)
+[Picture of Node Commands](https://github.com/NickJLombardo/LIRI/blob/master/Liri.png)
