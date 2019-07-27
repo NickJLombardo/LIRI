@@ -51,11 +51,9 @@ request("https://rest.bandsintown.com/artists/" + query + "/events?app_id=coding
 
 function spotifySearch (query) {
 
-  if (!query) query = "Por mi reggae muero";
+  if (!query) query = "";
 
-  spotify
-  .search({ type: 'track', query: query })
-  .then(function(response) {
+  spotify.search({ type: 'track', query: query }).then(function(response) {
     let songInfo = "The artists name is: " + response.tracks.items[0].artists[0].name + "\n" + "The songs name is: " + response.tracks.items[0].name + "\n" + "The URL to the song is: " + response.tracks.items[0].external_urls.spotify + "\n" + "The URL to the album is: " + response.tracks.items[0].album.external_urls.spotify
 
     fs.appendFile("log.txt", "Song \n \n" + songInfo + divider, function(err) {
@@ -91,6 +89,7 @@ function doSomething () {
       case "spotify-this-song":
       spotifySearch(query);
         break;
+
     }
   });
 
