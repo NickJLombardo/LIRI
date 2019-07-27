@@ -24,5 +24,5 @@ It should run spotify-this-song for "I Want it That Way," as follows the text in
 
 
 
-![GitHub Logo](Screen Shot 2019-07-27 at 6.07.40 PM)
+(LIRI.png)
 Format: ![Alt Text](url)
