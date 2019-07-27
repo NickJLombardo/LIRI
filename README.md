@@ -24,5 +24,4 @@ It should run spotify-this-song for "I Want it That Way," as follows the text in
 
 
 
-http://github.com - automatic!
-[GitHub](http://Users/nicklombardo/Desktop/Screen%20Shot%202019-07-27%20at%206.07.40%20PM.png)
+[GitHub](file:///Users/nicklombardo/Desktop/Screen%20Shot%202019-07-27%20at%206.07.40%20PM.png)
