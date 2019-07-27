@@ -19,14 +19,11 @@ switch (action) {
   case "spotify-this-song":
   spotifySearch(query);
     break;
-  case "movie-this":
-    movies(query);
-    break;
   case "do-what-it-says":
     doSomething();
     break;
   default:
-    console.log("The commands available are concert-this, spotify-this-song, movie-this and do-what-it-says ")
+    console.log("The commands available are concert-this, spotify-this-song, and do-what-it-says ")
 
 }
 
@@ -51,42 +48,6 @@ request("https://rest.bandsintown.com/artists/" + query + "/events?app_id=coding
 })
 }
 
-
-function movies(query){
-
-  console.log(query)
-  request("http://www.omdbapi.com/?apikey=418b7fe2&t=" + query, function(err, response, data) {
-
-    if (query != "") { 
-      
-      let movieInfo =  "The movie's title is: " + JSON.parse(data).Title + "\n" + "The movie was realeased in the year: " + "\n" + JSON.parse(data).Year + "\n" + "The movie's rating is: " + "\n" + JSON.parse(data).imdbRating + "\n" + "The movie's Rotten Tomato Score is: " + "\n" + JSON.parse(data).Ratings[1].Value + "\n" + "The movie was shot in: " + "\n" + JSON.parse(data).Country + "\n" + "The movie's language is: " + "\n" + JSON.parse(data).Language + "\n" + "The movie's plot is: " + "\n" + JSON.parse(data).Plot + "\n" + "The actors in this movie are: " + "\n" + JSON.parse(data).Actors
-
-      fs.appendFile("log.txt", "Movie \n \n" + movieInfo + divider, function(err) {
-        if (err) {
-          console.log(err);
-        }      
-        console.log(movieInfo);
-      });
-
-    } else {
-      request("http://www.omdbapi.com/?apikey=418b7fe2&t=Mr+Nobody", function (err, response, data) {
-      
-    if (!err && response.statusCode === 200) {
-
-      let movieInfo =  "The movie's title is: " + JSON.parse(data).Title + "\n" + "The movie was realeased in the year: " + "\n" + JSON.parse(data).Year + "\n" + "The movie's rating is: " + "\n" + JSON.parse(data).imdbRating + "\n" + "The movie's Rotten Tomato Score is: " + "\n" + JSON.parse(data).Ratings[1].Value + "\n" + "The movie was shot in: " + "\n" + JSON.parse(data).Country + "\n" + "The movie's language is: " + "\n" + JSON.parse(data).Language + "\n" + "The movie's plot is: " + "\n" + JSON.parse(data).Plot + "\n" + "The actors in this movie are: " + "\n" + JSON.parse(data).Actors
-
-      fs.appendFile("log.txt", "Movie \n \n" + movieInfo + divider, function(err) {
-        if (err) {
-          console.log(err);
-        }      
-        console.log(movieInfo);
-      });
-     
-    }
-  });
-}
-});
-}
 
 function spotifySearch (query) {
 
@@ -130,8 +91,6 @@ function doSomething () {
       case "spotify-this-song":
       spotifySearch(query);
         break;
-      case "movie-this":
-        movies(query);
     }
   });
 
